@@ -1,0 +1,43 @@
+{
+	"name": "actor-RestoreSettings",
+	"version": "0.5.0",
+	"description": "Saves and restores hub settings, optionally automatically",
+	"keywords": "Fabrica-IO, actor, trigger",
+	"repository":
+	{
+	  "type": "git",
+	  "url": "https://github.com/FabricaIO/actor-RestoreSettings.git"
+	},
+	"authors":
+	[
+	  {
+		"name": "Sam Groveman",
+		"email": "SamGroveman@outlook.com",
+		"url": "https://github.com/FabricaIO"
+	  }
+	],
+	"dependencies": {},
+	"license": "GPLv3",
+	"homepage": "https://github.com/FabricaIO",
+	"frameworks": "arduino",
+	"platforms": "*",
+	"fabricaio" : {
+		"name": "Settings Restore",
+		"type": 1,
+		"category": "settings",
+		"libname": "RestoreSettings",
+		"includes": ["RestoreSettings"],
+		"description": "Saves and restores hub settings, optionally automatically",
+		"constructor":
+		[
+			[
+				{
+					"name": "configFile",
+					"type": "String",
+					"description": "The file name to store settings in",
+					"default": "RestoreSettingsConfig.json"
+				}
+			]
+		]
+	}
+  }
