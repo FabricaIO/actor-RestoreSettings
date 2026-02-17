@@ -12,19 +12,19 @@
 #include <ArduinoJson.h>
 #include <Configuration.h>
 
-/// @brief Class providing the function to save an restore device settings
+/// @brief Class providing the function to save and restore hub settings
 class RestoreSettings : public Actor {
 	protected:
 		/// @brief Restorer configuration
 		struct {
-			/// @brief Auto restore device settings on boot
+			/// @brief Auto restore hub settings on boot
 			bool autoRestore = false;	
 		} settings_restore_config;
 
 		/// @brief Path to configuration file
 		String config_path;
 
-		/// @brief Path to file storeing the device settings
+		/// @brief Path to file storing the hub settings
 		String settings_file;
 
 		bool saveSettings();

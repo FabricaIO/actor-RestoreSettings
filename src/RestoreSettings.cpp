@@ -93,14 +93,14 @@ bool RestoreSettings::setConfig(String config, bool save) {
 		return true;
 }
 
-/// @brief Saves the current device settings to a file
+/// @brief Saves the current hub settings to a file
 /// @return True on success
 bool RestoreSettings::saveSettings() {
 	Logger.println("Saving current settings...");
 	return Storage::writeFile(settings_file, Configuration::getConfig());
 }
 
-/// @brief Restores the saves configuration
+/// @brief Restores the saved configuration
 /// @return True on success
 bool RestoreSettings::restoreSettings() {
 	Logger.println("Restoring saved settings...");
