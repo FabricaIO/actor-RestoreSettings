@@ -31,7 +31,7 @@ class RestoreSettings : public Actor {
 		bool restoreSettings();
 	public:
 		RestoreSettings(String Name, String configFile = "RestoreSettingsConfig.json");
-		std::tuple<bool, String> receiveAction(int action, String payload);
+		std::pair<bool, String> receiveAction(const int action, const String& payload = "");
 		bool begin();
 		String getConfig();
 		bool setConfig(String config, bool save);

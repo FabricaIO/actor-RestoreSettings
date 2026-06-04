@@ -38,7 +38,7 @@ bool RestoreSettings::begin() {
 /// @param action The action to process
 /// @param payload Payload to be passed to triggered action
 /// @return JSON response
-std::tuple<bool, String> RestoreSettings::receiveAction(int action, String payload) {
+std::pair<bool, String> RestoreSettings::receiveAction(const int action, const String& payload) {
 	if (action == 0) {		
 		if (saveSettings()) {
 			return { true, R"({"success": true})" }; 
